@@ -1,0 +1,79 @@
+/* =======================================================
+   GLOBAL.CSS - Variáveis e Reset
+   ======================================================= */
+
+/* Importando Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    /* Paleta de Cores (Dark Matte & Gold) */
+    --bg-body: #121214;       /* Cinza quase preto (Matte) */
+    --bg-card: #202024;       /* Cinza um pouco mais claro para cards */
+    --text-primary: #E1E1E6;  /* Off-white para leitura confortável */
+    --text-secondary: #A8A8B3;/* Cinza claro para detalhes */
+    
+    --gold: #D4AF37;          /* Dourado Clássico */
+    --gold-hover: #F2C94C;    /* Dourado mais claro para hover */
+    
+    /* Tipografia */
+    --font-title: 'Cinzel', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+}
+
+/* Utilitários */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Botão Padrão (Estilo Dourado) */
+.btn-gold {
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--gold);
+    color: #000; /* Texto preto no fundo dourado fica chique */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
