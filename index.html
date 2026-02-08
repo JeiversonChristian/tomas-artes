@@ -18,18 +18,26 @@
 
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo">Tomás Artes</a>
+            <a href="index.html" class="logo">Tomas Artes</a>
             
-            <nav>
+            <button class="btn-mobile" aria-label="Abrir Menu">
+                <i class="ph ph-list"></i>
+            </button>
+
+            <nav id="nav">
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Início</a></li>
                     <li><a href="pages/galeria.html" class="nav-link">Galeria</a></li>
                     <li><a href="pages/sobre.html" class="nav-link">O Artista</a></li>
                     <li><a href="pages/contato.html" class="nav-link">Contato</a></li>
+                    
+                    <li class="mobile-only">
+                        <a href="pages/galeria.html" class="btn-gold">Loja</a>
+                    </li>
                 </ul>
             </nav>
             
-            <a href="pages/galeria.html" class="btn-gold" style="padding: 8px 20px; font-size: 0.8rem;">
+            <a href="pages/galeria.html" class="btn-gold desktop-only">
                 Loja
             </a>
         </div>

@@ -70,3 +70,25 @@
     font-weight: 500;
     text-shadow: 0 1px 5px rgba(0,0,0,0.5);
 }
+
+/* =======================================================
+   RESPONSIVIDADE (MOBILE)
+   ======================================================= */
+
+@media (max-width: 768px) {
+    /* Ajusta o tamanho da fonte do Título */
+    .hero-content h1 {
+        font-size: 2.2rem; /* De 3.5rem para 2.2rem */
+    }
+
+    /* Ajusta o tamanho do texto de apoio */
+    .hero-content p {
+        font-size: 1rem;
+        padding: 15px; /* Menos preenchimento lateral */
+    }
+
+    /* Ajusta a imagem de fundo para focar melhor no celular */
+    #hero::before {
+        background-position: center top; /* Foca mais no topo da imagem se for vertical */
+    }
+}
