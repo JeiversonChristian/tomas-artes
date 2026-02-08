@@ -2,7 +2,7 @@
 
 Site de vendas do Tomás
 
-Colocar o link aqui depois:
+Colocar o link aqui depois: https://jeiversonchristian.github.io/tomas-artes/
 
 ```text
 /tomas-artes

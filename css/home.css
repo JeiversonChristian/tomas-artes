@@ -29,7 +29,7 @@
     /* Usamos um degradê mais leve, pois o desfoque já escurece */
     background: 
         linear-gradient(rgba(0,0,0,0.4), #121214),
-        url('../../assets/img/hero-bg.jpg');
+        url('../assets/img/hero-bg.jpg');
     background-size: cover;
     background-position: center;
 
