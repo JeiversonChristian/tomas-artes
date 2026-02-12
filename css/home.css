@@ -8,7 +8,7 @@
     position: relative; /* Necessário para o elemento filho absoluto se posicionar */
     overflow: hidden;   /* Garante que as bordas desfocadas não vazem */
     
-    /* Centralização do conteúdo (igual antes) */
+    /* Centralização do conteúdo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,16 +25,16 @@
     height: 100%;
     z-index: -1; /* Fica ATRÁS do texto */
 
-    /* A imagem de fundo agora fica AQUI */
-    /* Usamos um degradê mais leve, pois o desfoque já escurece */
+    /* A imagem de fundo PADRÃO (Desktop) */
     background: 
         linear-gradient(rgba(0,0,0,0.4), #121214),
         url('../assets/img/hero-bg.jpg');
+    
     background-size: cover;
     background-position: center;
 
     /* O DESFOQUE */
-    filter: blur(2.5px); /* Aumente para 12px se quiser mais abstrato */
+    filter: blur(1px); 
     
     /* TRUQUE: Aumenta um pouco a imagem para esconder as bordas brancas que o blur cria */
     transform: scale(1.1); 
@@ -44,9 +44,6 @@
 .hero-content {
     z-index: 1; /* Garante que fica NA FRENTE do fundo desfocado */
     padding: 0 20px;
-    
-    /* Como o fundo está desfocado, não precisamos mais daquela sombra preta pesada da Opção 2.
-       Podemos usar uma sombra mais leve e elegante. */
 }
 
 .hero-content h1 {
@@ -78,17 +75,23 @@
 @media (max-width: 768px) {
     /* Ajusta o tamanho da fonte do Título */
     .hero-content h1 {
-        font-size: 2.2rem; /* De 3.5rem para 2.2rem */
+        font-size: 2.2rem;
     }
 
     /* Ajusta o tamanho do texto de apoio */
     .hero-content p {
         font-size: 1rem;
-        padding: 15px; /* Menos preenchimento lateral */
+        padding: 15px;
     }
 
-    /* Ajusta a imagem de fundo para focar melhor no celular */
+    /* --- A MÁGICA DA TROCA DE IMAGEM AQUI --- */
     #hero::before {
-        background-position: center top; /* Foca mais no topo da imagem se for vertical */
+        /* Foca no topo da imagem vertical */
+        background-position: center top; 
+        
+        /* Troca APENAS a imagem, mantendo o degradê escuro */
+        background-image: 
+            linear-gradient(rgba(0,0,0,0.4), #121214),
+            url('../assets/img/hero-bg2.jpg');
     }
 }
